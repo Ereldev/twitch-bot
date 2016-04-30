@@ -1,0 +1,7 @@
+TwitchBot/bin
+TwitchBot/obj
+
+TwitchBotTest/bin
+TwitchBotTest/obj
+
+*.userprefs
