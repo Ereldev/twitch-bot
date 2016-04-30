@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Threading;
 
 using TwitchBot;
@@ -13,8 +14,12 @@ namespace TwitchBotTest
 
 			Console.WriteLine("Connecting ...");
 
+			string username = ConfigurationManager.AppSettings["username"];
+			string password = ConfigurationManager.AppSettings["password"];
+			string channel = ConfigurationManager.AppSettings["channel"];
+
 			TwitchClient client = new TwitchClient();
-			client.Connect("ereldev", "oauth:4gjpks0n9fl9lxch0z1xegklbqdjcs", "thegaarnik");
+			client.Connect(username, password, channel);
 
 			Console.WriteLine("Connected !");
 

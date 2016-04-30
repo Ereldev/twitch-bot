@@ -4,4 +4,6 @@ TwitchBot/obj
 TwitchBotTest/bin
 TwitchBotTest/obj
 
+app.config
+
 *.userprefs
