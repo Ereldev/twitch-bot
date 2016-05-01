@@ -48,6 +48,16 @@ namespace TwitchBot
 			this.irc.Disconnect();
 		}
 
+		public void WriteChatMessage(string message)
+		{
+			this.irc.WriteChatMessage(message, APP_HOST);
+		}
+
+		public void WriteWhisperMessage(string user, string message)
+		{
+			this.irc.WriteWhisperMessage(user, message, APP_HOST);
+		}
+
 		public AbstractMessage NextMessage()
 		{
 			lock(this.messages)

@@ -62,6 +62,13 @@ namespace TwitchBot
 				+ " PRIVMSG #" + this.Room + " :" + message);
 		}
 
+		public void WriteWhisperMessage(string user, string message, string appHost)
+		{
+			this.WriteIRCMessage(
+				":" + this.Username + "!" + this.Username + "@" + this.Username + "." + appHost 
+				+ " PRIVMSG #" + this.Room + " :" + "/w " + user + " " + message);
+		}
+
 		public void WriteIRCMessage(string message)
 		{
 			this.outputStream.WriteLine(message);

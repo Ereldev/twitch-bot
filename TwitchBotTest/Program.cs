@@ -37,6 +37,8 @@ namespace TwitchBotTest
 					case AbstractMessage.MessageType.WHISPER:
 						WhisperMessage whisperMessage = (WhisperMessage) message;
 						Console.WriteLine(whisperMessage.FromUser + " -> " + whisperMessage.ToUser + ": " + whisperMessage.Text);
+
+						client.WriteWhisperMessage(whisperMessage.FromUser, "Your message was: " + whisperMessage.Text);
 						break;
 					}
 				}
